@@ -8,7 +8,7 @@ function phi([n00, n01, n10, n11]) {
               (n01 + n11) *
               (n00 + n10));
 }
-console.log(phi([76, 9, 4, 1]));
+// console.log(phi([76, 9, 4, 1]));
 
 
 function tableFor(event, journal) {
@@ -21,6 +21,20 @@ function tableFor(event, journal) {
   }
   return table;
 }
-console.log(tableFor('pizza', JOURNAL));
-console.log(phi(tableFor('pizza', JOURNAL)));
+// console.log(tableFor('pizza', JOURNAL));
+// console.log(phi(tableFor('pizza', JOURNAL)));
+
+function journalEvents(journal) {
+  let events = [];
+  for (let entry of journal) {
+    for (let event of entry.events) {
+      if (!events.includes(event)) {
+        events.push(event);
+      }
+    }
+  }
+  return events;
+}
+
+console.log(journalEvents(JOURNAL));
 
