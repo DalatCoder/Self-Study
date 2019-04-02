@@ -20,7 +20,7 @@ function freezeObj() {
   };
   // change code below this line
 
-  Object.freeze(freezeObj);
+  Object.freeze(MATH_CONSTANTS);
   // change code above this line
   try {
     MATH_CONSTANTS.PI = 99;
